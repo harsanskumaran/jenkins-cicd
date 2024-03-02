@@ -46,7 +46,7 @@ pipeline {
             echo 'Deployment failed!'
             emailext subject: 'Pipeline Status - Failure',
                       body: 'Your pipeline has failed to deploy.',
-                      to: 'harsanskumran@gmail.com'
+                      to: 'harsanskumran675@gmail.com'
         }
     }
 
