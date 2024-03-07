@@ -14,7 +14,7 @@ pipeline {
                 // Install Python dependencies using pip
                 //sh 'python3 -m pip install -r requirements.txt'
                 //sh '/usr/local/bin/pip install -r requirements.txt'
-                sh 'pip install -r requirements_hk.txt'
+                sh 'pip install -r requirements.txt'
             }
         }
         
