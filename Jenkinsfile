@@ -37,19 +37,22 @@ pipeline {
         success {
             // Notify on successful deployment
             echo 'Deployment successful!'
-            echo 'Deployment successful!'
-            def consoleOutput = currentBuild.rawBuild.getLog(10)
+            script {
+            def consoleOutput = currentBuild.rawBuild.getLog(1000)
             emailext subject: 'Pipeline Status - Success',
                       body: "Your pipeline has been successfully deployed.\n\nConsole Output:\n${consoleOutput}",
                       to: 'harsanskumaran675@gmail.com'
         }
+        }
         failure {
             // Notify on deployment failure
             echo 'Deployment failed!'
-            def consoleOutput = currentBuild.rawBuild.getLog(10)
+            script {
+            def consoleOutput = currentBuild.rawBuild.getLog(1000)
             emailext subject: 'Pipeline Status - Failure',
                       body: "Your pipeline has failed to deploy.\n\nConsole Output:\n${consoleOutput}",
                       to: 'harsanskumaran675@gmail.com'
+        }
         }
     }
 
