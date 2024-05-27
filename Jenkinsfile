@@ -39,7 +39,7 @@ pipeline {
                 def consoleOutput = currentBuild.rawBuild.getLog(10).join("\n")
                 emailext subject: 'Pipeline Status - Success',
                          body: "Your pipeline has been successfully deployed.\n\nConsole Output:\n${consoleOutput}",
-                         to: 'harsanskumaran@gmail.com'
+                         to: 'svhkfood@gmail.com'
             }
         }
         failure {
@@ -49,7 +49,7 @@ pipeline {
                 def consoleOutput = currentBuild.rawBuild.getLog(10).join("\n")
                 emailext subject: 'Pipeline Status - Failure',
                          body: "Your pipeline has failed to deploy.\n\nConsole Output:\n${consoleOutput}",
-                         to: 'harsanskumaran@gmail.com'
+                         to: 'svhkfood@gmail.com'
             }
         }
     }
