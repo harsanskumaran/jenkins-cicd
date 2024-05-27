@@ -28,7 +28,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Deploy your Python application
-                sh 'python3 HelloWorld1.py'
+                sh 'python3 HelloWorld.py'
             }
         }
     }
