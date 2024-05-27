@@ -35,7 +35,7 @@ pipeline {
     
     post {
         success {
-            // Notify on successful deployment
+            // Notify on successful deployment hkk
             echo 'Deployment successful!'
             script {
             def consoleOutput = currentBuild.rawBuild.getLog(10)
